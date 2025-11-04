@@ -11,12 +11,12 @@
 <div class="container mt-5">
 
 
-<form class="row g-3">
+<form class="row g-3" action="/categories" method="get">
     <div class="col-1">
         <a href="/categories/new" class="btn btn-primary mb-3">New</a>
     </div>
     <div class="col-10">
-        <input type="search" class="form-control" id="inputPassword2" placeholder="Search Categories here!">
+        <input type="search" class="form-control" name="searchText" th:value="${searchText!=null ? searchText:''}" placeholder="Search Categories here!">
     </div>
     <div class="col-1">
         <button type="submit" class="btn btn-primary mb-3">Search</button>
